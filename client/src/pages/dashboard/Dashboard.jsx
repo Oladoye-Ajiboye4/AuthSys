@@ -5,7 +5,8 @@ import axios from 'axios';
 import { Icon } from '@iconify/react';
 
 const Dashboard = () => {
-  const dashboardUrl = 'http://localhost:7890/getDashboard'
+  const dashboardUrl = `${import.meta.env.VITE_BASE_URL}dashboard`;
+  
   const [user, setUser] = useState({})
   const [loading, setLoading] = useState(true)
   const navigate = useNavigate()
